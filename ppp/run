@@ -1,0 +1,3 @@
+#!/bin/sh
+
+erl -name localhost -mnesia dir db
