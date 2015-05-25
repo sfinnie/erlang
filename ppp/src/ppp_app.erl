@@ -14,6 +14,7 @@
 %% ===================================================================
 
 start(normal, []) ->
+  io:format("In ppp_app, about to call mnesia:wait_for_tables"),
   mnesia:wait_for_tables([ppp_people, ppp_projects, ppp_roles], 5000),
   ppp_sup:start_link().
 
@@ -23,6 +24,7 @@ stop(_State) ->
 -ifdef(TEST).
 
 simple_test() ->
+  io:format("In ppp_app:simple_test(), about to call application:start()"),
     ok = application:start(ppp),
     ?assertNot(undefined == whereis(ppp_sup)).
 
