@@ -14,7 +14,7 @@
 %% ===================================================================
 
 start(normal, []) ->
-  io:format("In ppp_app, about to call mnesia:wait_for_tables"),
+  io:format("In ppp_app:start(), about to call mnesia:wait_for_tables"),
   mnesia:wait_for_tables([ppp_people, ppp_projects, ppp_roles], 5000),
   ppp_sup:start_link().
 
