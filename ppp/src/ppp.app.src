@@ -1,0 +1,12 @@
+{application, ppp,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { ppp_app, []}},
+  {env, []}
+ ]}.
