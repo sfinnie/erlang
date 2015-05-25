@@ -1,11 +1,12 @@
 {application, ppp,
  [
-  {description, ""},
-  {vsn, "1"},
+  {description, "People, Projects and, er Roles?!?"},
+  {vsn, "1.0.0"},
   {registered, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  mnesia
                  ]},
   {mod, { ppp_app, []}},
   {env, []}

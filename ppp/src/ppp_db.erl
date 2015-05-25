@@ -2,8 +2,8 @@
 -compile(export_all).
 -include("ppp.hrl").
 
-init() ->
-  mnesia:create_schema(node()),
+init(Nodes) ->
+  mnesia:create_schema(Nodes),
   application:start(mnesia),
   create_tables(),
   mnesia:stop().

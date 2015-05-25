@@ -13,8 +13,9 @@
 %% Application callbacks
 %% ===================================================================
 
-start(_StartType, _StartArgs) ->
-    ppp_sup:start_link().
+start(normal, []) ->
+  mnesia:wait_for_tables([ppp_people, ppp_projects, ppp_roles], 5000),
+  ppp_sup:start_link().
 
 stop(_State) ->
     ok.
