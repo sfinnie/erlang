@@ -25,7 +25,7 @@ stop(_State) ->
 
 simple_test() ->
   io:format("In ppp_app:simple_test(), about to call application:start()"),
-    ok = application:start(ppp),
+    ok = application:start(ppp,[]),
     ?assertNot(undefined == whereis(ppp_sup)).
 
 -endif.

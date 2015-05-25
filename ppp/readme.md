@@ -5,3 +5,8 @@ Created according to the standard erlang [conventions](http://www.erlang.org/doc
 
 ##Using Dialyzer
 Followed the [learn you some erlang](http://learnyousomeerlang.com/dialyzer) instructions.  First built the plt then looked into calling Dialyzer from rebar.  Discovered [this canonical makefile](https://gist.github.com/ericbmerritt/5706091) instead.  Copied it (no changes) and can now compile, run dialyzer, build and test with a simple `make all`. Nice.
+
+##To run app
+1. `cd ebin`
+2. `erl`
+3. `ppp:start(normal, []).`
